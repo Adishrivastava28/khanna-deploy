@@ -1,101 +1,166 @@
+import Footer from "@/components/footer/Footer";
+import Abt from "@/components/home/about";
+import { CarouselSize } from "@/components/home/Carousel";
+import DropdownButton from "@/components/home/Drop";
+import Loc from "@/components/home/loc";
+import LookingFor from "@/components/home/lookingfor";
+import PropertyAdd from "@/components/home/PropertyAdd";
+import PropertyCard from "@/components/property/PropertyCard";
+import { Button } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const properties = [
+    {
+      propertyName: "Sunset Villa",
+      propertyType: "Villa",
+      price: "$750,000",
+      area: "3500",
+      location: "789 Pine Ave, Springfield, IL",
+      status: "For Sale",
+      transaction: "Sale",
+      imageSrc: "/images/property-1.jpeg", // Image for the property
+      plotArea: "4000",
+      bedrooms: "4",
+      furnishing: "Furnished",
+      propertyAge: "5 years",
+      flatNo: "B2",
+      buildingName: "Sunset Towers",
+      street: "Pine Ave",
+      landmark: "Near Springfield Park",
+      pinCode: "62704",
+      address: "789 Pine Ave, Springfield, IL",
+      city: "Springfield",
+    },
+    {
+      propertyName: "Maple Condo",
+      propertyType: "Condo",
+      price: "$200,000",
+      area: "1200",
+      location: "101 Maple St, Springfield, IL",
+      status: "For Rent",
+      transaction: "Rent",
+      imageSrc: "/images/property-2.jpeg", // Image for the property
+      plotArea: "1500",
+      bedrooms: "2",
+      furnishing: "Semi-Furnished",
+      propertyAge: "3 years",
+      flatNo: "C1",
+      buildingName: "Maple Heights",
+      street: "Maple St",
+      landmark: "Next to City Mall",
+      pinCode: "62702",
+      address: "101 Maple St, Springfield, IL",
+      city: "Springfield",
+    },
+    {
+      propertyName: "Ocean Breeze Apartment",
+      propertyType: "Apartment",
+      price: "$450,000",
+      area: "1800",
+      location: "120 Ocean Dr, Miami, FL",
+      status: "For Sale",
+      transaction: "Sale",
+      imageSrc: "/images/property-3.jpeg", // Image for the property
+      plotArea: "2000",
+      bedrooms: "3",
+      furnishing: "Unfurnished",
+      propertyAge: "10 years",
+      flatNo: "A5",
+      buildingName: "Ocean Breeze",
+      street: "Ocean Dr",
+      landmark: "Near Miami Beach",
+      pinCode: "33139",
+      address: "120 Ocean Dr, Miami, FL",
+      city: "Miami",
+    },
+    {
+      propertyName: "Hilltop Mansion",
+      propertyType: "Mansion",
+      price: "$2,500,000",
+      area: "7500",
+      location: "456 Hilltop Rd, Beverly Hills, CA",
+      status: "For Sale",
+      transaction: "Sale",
+      imageSrc: "/images/property-4.jpeg", // Image for the property
+      plotArea: "10000",
+      bedrooms: "6",
+      furnishing: "Fully Furnished",
+      propertyAge: "15 years",
+      flatNo: "N/A",
+      buildingName: "Hilltop Estates",
+      street: "Hilltop Rd",
+      landmark: "Near Beverly Hills Park",
+      pinCode: "90210",
+      address: "456 Hilltop Rd, Beverly Hills, CA",
+      city: "Beverly Hills",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  return (
+    <>
+      <div className="w-fit z-50 h-fit sticky  left-1/2 transform -translate-x-1/2 ">
+        <Link href="/">
+          <Image
+            src="/lg2.png" // Replace with your logo path
+            alt="Logo"
+            width={96}
+            height={96} // Adjust the dimensions as needed
+            className="w-16 sm:w-24 z-50"
+            //w-16 sm:w-20 md:w-24 lg:w-28 z-50
+          />
+        </Link>
+      </div>
+      <CarouselSize />
+      <Abt />
+      <LookingFor />
+      <Loc></Loc>
+      <div className="p-4">
+        <div className="text-4xl mt-5 text-center mb-5">Featured Projects</div>
+        <div className="flex flex-wrap justify-evenly gap-1">
+          {properties.map((property, index) => (
+            <PropertyCard
+              key={index}
+              propertyName={property.propertyName}
+              propertyType={property.propertyType}
+              price={property.price}
+              area={property.area}
+              location={property.location}
+              status={property.status}
+              transaction={property.transaction}
+              imageSrc={property.imageSrc}
+              plotArea={property.plotArea}
+              bedrooms={property.bedrooms}
+              furnishing={property.furnishing}
+              propertyAge={property.propertyAge}
+              flatNo={property.flatNo}
+              buildingName={property.buildingName}
+              street={property.street}
+              landmark={property.landmark}
+              pinCode={property.pinCode}
+              address={property.address}
+              city={property.city}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+      <div className="flex flex-col items-center justify-center h-auto w-full space-y-4 mb-4">
+        <Link
+          href={"/properties"}
+          className="flex flex-col items-center justify-center h-auto w-full space-y-4 mb-4"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          {" "}
+          <Button variant={"outline"} className="w-3/4 sm:w-1/3">
+            Explore More
+          </Button>
+        </Link>
+      </div>
+
+      <PropertyAdd />
+      {/* <DropdownButton /> */}
+      <Footer></Footer>
+    </>
   );
 }

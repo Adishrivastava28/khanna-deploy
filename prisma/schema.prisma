@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+
+model Property {
+  id            Int      @id @default(autoincrement())
+  propertyName  String   @db.VarChar(255)
+  propertyType  String   @db.VarChar(255)
+  price         String   @db.VarChar(255)
+  area          String   @db.VarChar(255)
+  plotArea      String?  @db.VarChar(255)
+  bedrooms      String?  @db.VarChar(255)
+  transaction   String?  @db.VarChar(255)
+  furnishing    String?  @db.VarChar(255)
+  propertyAge   String?  @db.VarChar(255)
+  flatNo        String?  @db.VarChar(50)
+  buildingName  String?  @db.VarChar(255)
+  street        String?  @db.VarChar(255)
+  landmark      String?  @db.VarChar(255)
+  pinCode       String?  @db.VarChar(20)
+  address       String?  @db.VarChar(255)
+  city          String   @db.VarChar(255)
+  location      String   @db.VarChar(255)
+  description   String?  @db.VarChar(255)
+  amenities     String?  @db.VarChar(255) // Storing as a comma-separated string
+  status        String   @db.VarChar(50)
+
+  createdAt     DateTime   @default(now())  // Change DateTime to String
+  updatedAt     DateTime  @updatedAt  // Change DateTime to String
+
+  @@index([city])
+  @@index([location])
+}
