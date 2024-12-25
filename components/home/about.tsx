@@ -6,7 +6,7 @@ import abtimg from "./abtimg.jpg"; // Adjust the path if needed
 
 const Abt: React.FC = () => {
   return (
-    <div className="md:flex h-auto my-10 mx-5 p-6  rounded-lg ">
+    <div className="md:flex h-auto my-10 mx-5 md:p-6  rounded-lg ">
       {/* Left Image Section */}
       <div className="w-full md:w-2/4 flex justify-center items-center mb-6 md:mb-0">
         <Image
@@ -20,9 +20,9 @@ const Abt: React.FC = () => {
       </div>
 
       {/* Right Text Section */}
-      <div className="w-full md:w-2/4 flex flex-col justify-center px-6">
+      <div className="w-full md:w-2/4 flex flex-col justify-center md:px-6">
         <div>
-          <h2 className="font-light text-lg sm:text-2xl md:text-3xl">PASSION AT WORK</h2>
+          <h2 className="font-light text-center text-lg sm:text-2xl md:text-3xl">PASSION AT WORK</h2>
         </div>
         <div
           className="w-full h-80 overflow-auto max-h-80 text-sm sm:text-lg md:mt-6 text-gray-600"

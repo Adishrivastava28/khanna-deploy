@@ -126,7 +126,9 @@ export default function Home() {
       <LookingFor />
       <Loc></Loc>
       <div className="p-4">
-        <div className="text-4xl mt-5 text-center mb-5">Featured Projects</div>
+        <div className="text-2xl md:text-4xl mt-5 font-light text-center mb-5">
+          FEATURED PROJECTS
+        </div>
         <div className="flex flex-wrap justify-evenly gap-1">
           {properties.map((property, index) => (
             <PropertyCard

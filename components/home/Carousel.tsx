@@ -64,17 +64,28 @@ export function CarouselSize() {
                   <img
                     src={image}
                     alt={`carousel-image-${index}`}
-                    className="object-cover w-full h-screen " // Ensure the image covers the entire space
+                    className={`object-cover  w-full h-screen ${
+                      index === 0
+                        ? "class-for-index-1 ml-3" // Class for index 1
+                        : index === 1
+                        ? "class-for-index-2" // Class for index 2
+                        : index === 2
+                        ? "class-for-index-3 mr-4" // Class for index 3
+                        : "class-for-other-indexes" // Class for all other indexes
+                    }`}
+                    // Ensure the image covers the entire space
                   />
                   {/* Add overlay text */}
                   <div className="absolute inset-0 flex flex-col items-center mt-56 justify-center text-center text-white">
                     <h2 className=" text-xl sm:text-3xl md:text-4xl font-bold mb-4">
                       {texts[index].heading}
                     </h2>
-                    <p className="  text-lg sm:text-xl mb-6">{texts[index].subheading}</p>
+                    <p className="  text-lg sm:text-xl mb-6">
+                      {texts[index].subheading}
+                    </p>
                     <Link
                       href="/"
-                      className="bg-yellow-500 text-black py-2 px-6 rounded-lg text-base sm:text-xl font-semibold"
+                      className="bg-yellow-500 text-black py-2 px-6 rounded-lg text-base sm:text-xl "
                     >
                       {texts[index].buttonText}
                     </Link>
