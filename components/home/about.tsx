@@ -22,10 +22,10 @@ const Abt: React.FC = () => {
       {/* Right Text Section */}
       <div className="w-full md:w-2/4 flex flex-col justify-center px-6">
         <div>
-          <h2 className="font-light text-3xl">PASSION AT WORK</h2>
+          <h2 className="font-light text-lg sm:text-2xl md:text-3xl">PASSION AT WORK</h2>
         </div>
         <div
-          className="w-full h-80 overflow-auto max-h-80 md:mt-6 text-gray-600"
+          className="w-full h-80 overflow-auto max-h-80 text-sm sm:text-lg md:mt-6 text-gray-600"
           id="abttxt"
         >
           Khanna Real Estate Solutions is a customer-centric consultancy,

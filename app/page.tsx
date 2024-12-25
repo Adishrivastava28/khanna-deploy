@@ -89,7 +89,7 @@ export default function Home() {
       location: "Egmore",
       status: "For Sale",
       transaction: "Sale",
-      imageSrc: "/images/property-4.jpeg", // Image for the property
+      imageSrc: "/propImg3.jpg", // Image for the property
       plotArea: "4036 sqft",
       bedrooms: "4 BHK",
       furnishing: "Fully Furnished",

@@ -50,18 +50,8 @@ const menuItems: MenuItem[] = [
     icon: Users,
     cName: "nav-text",
   },
-  {
-    title: "Career",
-    url: "/career",
-    icon: Briefcase,
-    cName: "nav-text",
-  },
-  {
-    title: "Location",
-    url: "/location",
-    icon: MapPin,
-    cName: "nav-text",
-  },
+
+
 ];
 
 export function AppSidebar() {

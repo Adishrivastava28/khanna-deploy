@@ -20,10 +20,10 @@ const PropertyHeader = () => {
       {/* Overlay Section */}
       <div className=" bottom-0 left-0 font-serif font-semibold right-0 z-10 bg-gray-950 bg-opacity-50 text-white text-center p-6">
         <p className=" md:text-base text-xs md:px-20 md:pb-6 opacity-80">
-          <span className="block text-2xl font-bold uppercase">
+          <span className="block text-sm md:text-2xl font-bold uppercase">
             Properties at Khanna Real Estate
           </span>
-          <span className="block text-lg mt-4">
+          <span className="block text-xs md:text-lg mt-4">
             Discover the perfect property that meets your needs and dreams. At
             Khanna Real Estate, we take pride in offering a wide range of
             properties to cater to diverse requirements. Whether you re looking
@@ -31,7 +31,7 @@ const PropertyHeader = () => {
             commercial space, we ensure transparency, trust, and excellence at
             every step.
           </span>
-          <span className="block text-lg mt-4">
+          <span className=" text-xs md:text-lg hidden md:block mt-4">
             Our team of dedicated professionals is here to assist you in making
             informed decisions, providing unparalleled support, and connecting
             you with properties that truly stand out in quality and value.
