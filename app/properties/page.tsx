@@ -91,7 +91,7 @@ export default function PropertyMain() {
       </div>
       <p className="text-lg text-gray-700 text-center mt-4 px-4 md:px-20 mb-6">
         Explore a variety of projects tailored to suit your needs, whether
-        you're looking for properties to buy, rent, or invest in.
+        you re looking for properties to buy, rent, or invest in.
       </p>
 
       <div className="flex flex-wrap justify-evenly gap-1">

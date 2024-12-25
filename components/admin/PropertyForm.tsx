@@ -78,7 +78,7 @@ export default function PropertyForm() {
      form.reset();
    } catch (error) {
      // Handle errors (e.g., validation or server errors)
-     console.log("Error submitting property:");
+     console.log("Error submitting property:",error);
      
    }
  };

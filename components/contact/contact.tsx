@@ -34,7 +34,7 @@ const ContactUs: React.FC = () => {
   const submitHandler = async () => {
     try {
       // Make POST request
-      const response = await axios.post("/api/email", formData);  // Update the endpoint to a Next.js API route
+       await axios.post("/api/email", formData);  // Update the endpoint to a Next.js API route
       console.log("Response:", formData);
 
       // Clear form data after successful submission

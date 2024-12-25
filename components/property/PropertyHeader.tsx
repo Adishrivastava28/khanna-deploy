@@ -26,7 +26,7 @@ const PropertyHeader = () => {
           <span className="block text-lg mt-4">
             Discover the perfect property that meets your needs and dreams. At
             Khanna Real Estate, we take pride in offering a wide range of
-            properties to cater to diverse requirements. Whether you're looking
+            properties to cater to diverse requirements. Whether you re looking
             for your dream home, a reliable investment opportunity, or the ideal
             commercial space, we ensure transparency, trust, and excellence at
             every step.

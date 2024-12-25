@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     return new NextResponse(JSON.stringify({ message: 'Property added successfully' }), { status: 200 });
     
   } catch (error) {
-    console.log('Error storing property:');
+    console.log('Error storing property:',error);
     // Respond with an error message if the database insertion fails
     return new NextResponse("Failed to store property", { status: 500 });
   }

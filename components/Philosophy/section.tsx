@@ -35,7 +35,7 @@ const Sections: React.FC = () => {
               your requirements take center stage. Our distinctiveness lies in
               securing the best pricing for our clients, making every
               transaction a value-driven success. At Khanna Real Estate
-              Solutions, your satisfaction is not just a goal it's our
+              Solutions, your satisfaction is not just a goal its our
               commitment.
               <br />
               <br />
@@ -79,7 +79,7 @@ const Sections: React.FC = () => {
               specializing in residential and commercial real estate. Our
               dedicated team provides expert guidance, personalized strategies,
               and market insights to empower clients in making informed
-              decisions. Whether you're buying, selling, or investing, we
+              decisions. Whether you re buying, selling, or investing, we
               navigate the complexities of the real estate landscape, ensuring
               seamless transactions and maximizing value for our clients.
               <br />

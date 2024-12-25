@@ -6,6 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 // Define the paths for the images and the corresponding text for each image
 const images = ["/img/a2.jpg", "/img/a1.jpeg", "/img/a3.jpg"];
@@ -71,12 +72,12 @@ export function CarouselSize() {
                       {texts[index].heading}
                     </h2>
                     <p className="text-xl mb-6">{texts[index].subheading}</p>
-                    <a
+                    <Link
                       href="/"
                       className="bg-yellow-500 text-black py-2 px-6 rounded-lg text-xl font-semibold"
                     >
                       {texts[index].buttonText}
-                    </a>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
