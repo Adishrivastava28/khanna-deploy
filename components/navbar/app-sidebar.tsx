@@ -1,9 +1,7 @@
 import {
   Calendar,
   Home,
-  Inbox,
-  Search,
-  Settings,
+
   MapPin,
   Users,
   Briefcase,
@@ -14,7 +12,7 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
+
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,

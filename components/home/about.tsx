@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image"; // Import Next.js Image component
 
 import abtimg from "./abtimg.jpg"; // Adjust the path if needed
-import { Button } from "../ui/button";
+
 
 const Abt: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ const Abt: React.FC = () => {
           requirements take center stage. Our distinctiveness lies in securing
           the best pricing for our clients, making every transaction a
           value-driven success. At Khanna Real Estate Solutions, your
-          satisfaction is not just a goal – it's our commitment.
+          satisfaction is not just a goal  its our commitment.
           <br />
           <br />
           Khanna Real Estate Solutions is a premier consultancy firm

@@ -3,9 +3,9 @@ import React, { useState } from "react";
 
 const DropdownButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
 
-  const handleLocationSelect = (location:any) => {
+  const handleLocationSelect = (location:string) => {
     setSelectedLocation(location);
     setIsOpen(false); // Close the dropdown after selecting a location
   };

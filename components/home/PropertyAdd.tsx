@@ -27,7 +27,7 @@ const PropertyAdd: React.FC = () => {
         </h2>
         <p className="text-gray-600 mb-6">
           Looking to sell your property with ease? Add your property details,
-          and we'll handle the rest! Our dedicated team ensures your property
+          and well handle the rest! Our dedicated team ensures your property
           gets the attention it deserves, connecting you with the right buyers
           and securing the best deals. Trust us to make selling your property
           seamless and hassle-free.
