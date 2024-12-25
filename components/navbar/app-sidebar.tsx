@@ -2,9 +2,9 @@ import {
   Calendar,
   Home,
 
-  MapPin,
+
   Users,
-  Briefcase,
+ 
   Phone,
 } from "lucide-react";
 import {
