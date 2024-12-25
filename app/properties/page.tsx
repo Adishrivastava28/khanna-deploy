@@ -129,7 +129,7 @@ export default function PropertyMain() {
 
       {hasMore && !loading && (
         <div className="text-center mt-4">
-          <button onClick={loadMore} className="btn btn-primary">
+          <button onClick={loadMore} className="btn border w-1/3 border-spacing-1 hover:bg-slate-50 rounded p-2 btn-primary">
             Load More
           </button>
         </div>

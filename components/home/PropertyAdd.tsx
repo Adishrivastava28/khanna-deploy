@@ -21,11 +21,11 @@ const PropertyAdd: React.FC = () => {
       </div>
 
       {/* Right Text Section */}
-      <div className="w-full md:w-2/4 flex flex-col justify-center px-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <div className="w-full md:w-2/4  flex flex-col justify-center md:px-6">
+        <h2 className=" text-base    sm:text-2xl font-semibold text-gray-800 mb-4">
           Ready to Sell Your Property?
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 text-sm sm:text-lg">
           Looking to sell your property with ease? Add your property details,
           and well handle the rest! Our dedicated team ensures your property
           gets the attention it deserves, connecting you with the right buyers
